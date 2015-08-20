@@ -6,14 +6,6 @@
 .fg-field-properties {
   position: relative;
   margin: 15px 0;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color: #fff;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  border: 1px solid #ddd;
   -webkit-touch-callout: initial;
   -webkit-user-select: initial;
   -khtml-user-select: initial;

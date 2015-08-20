@@ -4,8 +4,6 @@
 }
 
 .fg-edit-canvas .fg-field.fg-edit-canvas-field {
-  padding-top: 15px;
-  padding-bottom: 15px;
 }
 
 /*.fg-edit-canvas .control-label {*/
@@ -15,26 +13,6 @@
 /*.fg-edit-canvas .controls {*/
 /*margin-left: 150px;*/
 /*}*/
-
-.fg-edit-canvas-area {
-  min-height: 340px;
-  /*position: relative;*/
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  border: 1px solid #ddd;
-  padding: 20px;
-}
-
-.fg-edit-canvas-area-empty {
-  /*position: absolute;*/
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
-  top: 20px;
-  margin: 0;
-  /*padding: 0;*/
-}
 
 .fg-edit-canvas-area-empty-x {
   font-size: 200px;

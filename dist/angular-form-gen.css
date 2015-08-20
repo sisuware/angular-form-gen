@@ -43,16 +43,10 @@
   -ms-user-select: none;
   user-select: none;
 
-  padding: 10px;
-  margin-bottom: 20px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
   position: relative;
 }
 
 .fg-edit-canvas .fg-field, .fg-edit-palette .fg-field:hover {
-  background-color: #f5f5f5;
 }
 
 .fg-edit-canvas-field .form-group, .fg-edit-palette .form-group {
@@ -65,8 +59,7 @@
 }
 
 .fg-edit-canvas .fg-field.error {
-  background-color: #f2dede;
-  border-color: #b94a48;
+
 }
 
 .fg-field-overlay {
@@ -80,9 +73,6 @@
   /*opacity:.0;*/
 
   /* Needed by IE */
-  filter: alpha(opacity=0);
-  background: #FFF;
-  background-color: rgba(255, 255, 255, 0.0);
   cursor: move;
 }
 
@@ -186,6 +176,7 @@
 .fg-tabs .tab-content {
 	padding: 10px;
 	border: 1px solid #ddd;
+  background: #fff;
 	border-top: none;
 	border-radius: 0px 0px 4px 4px;
 }
@@ -195,8 +186,6 @@
 }
 
 .fg-edit-canvas .fg-field.fg-edit-canvas-field {
-  padding-top: 15px;
-  padding-bottom: 15px;
 }
 
 /*.fg-edit-canvas .control-label {*/
@@ -206,24 +195,6 @@
 /*.fg-edit-canvas .controls {*/
 /*margin-left: 150px;*/
 /*}*/
-
-.fg-edit-canvas-area {
-  min-height: 340px;
-  /*position: relative;*/
-  border-radius: 4px;
-  border: 1px solid #ddd;
-  padding: 20px;
-}
-
-.fg-edit-canvas-area-empty {
-  /*position: absolute;*/
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
-  top: 20px;
-  margin: 0;
-  /*padding: 0;*/
-}
 
 .fg-edit-canvas-area-empty-x {
   font-size: 200px;
@@ -405,12 +376,6 @@
 .fg-field-properties {
   position: relative;
   margin: 15px 0;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color: #fff;
-  border-radius: 4px;
-  border: 1px solid #ddd;
   -webkit-touch-callout: initial;
   -webkit-user-select: initial;
   -khtml-user-select: initial;
