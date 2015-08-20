@@ -7,14 +7,14 @@ fg.directive('fgEditCanvasField', function ($timeout) {
       // Prevent the property tabs from closing if the field schema is invalid
 
       $scope.toggleProperties = function (field) {
-        if (field.$_displayProperties) {
-          field.$_displayProperties = field.$_invalid;
+        if (field.$$_displayProperties) {
+          field.$$_displayProperties = field.$$_invalid;
         } else {
-          field.$_displayProperties = true;
+          field.$$_displayProperties = true;
         }
       }
 
-      $scope.$watch('field.$_displayProperties', function (value) {
+      $scope.$watch('field.$$_displayProperties', function (value) {
 
         if (value) {
           $scope.expanded = true;

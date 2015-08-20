@@ -186,16 +186,16 @@ describe('mindef-navbar-directive', function () {
         locationMock.path('/a');
         $scope.$digest();
 
-        expect($scope.items[0].$_active).toBeTruthy();
-        expect($scope.items[1].$_active).toBeFalsy();
-        expect($scope.items[2].$_active).toBeFalsy();
+        expect($scope.items[0].$$_active).toBeTruthy();
+        expect($scope.items[1].$$_active).toBeFalsy();
+        expect($scope.items[2].$$_active).toBeFalsy();
 
         locationMock.path('/b');
         $scope.$digest();
 
-        expect($scope.items[0].$_active).toBeFalsy();
-        expect($scope.items[1].$_active).toBeTruthy();
-        expect($scope.items[2].$_active).toBeFalsy();
+        expect($scope.items[0].$$_active).toBeFalsy();
+        expect($scope.items[1].$$_active).toBeTruthy();
+        expect($scope.items[2].$$_active).toBeFalsy();
 
       });
 
@@ -212,16 +212,16 @@ describe('mindef-navbar-directive', function () {
         locationMock.path('/a/sub');
         $scope.$digest();
 
-        expect($scope.items[0].$_active).toBeTruthy();
-        expect($scope.items[1].$_active).toBeFalsy();
-        expect($scope.items[2].$_active).toBeFalsy();
+        expect($scope.items[0].$$_active).toBeTruthy();
+        expect($scope.items[1].$$_active).toBeFalsy();
+        expect($scope.items[2].$$_active).toBeFalsy();
 
         locationMock.path('/b/sub');
         $scope.$digest();
 
-        expect($scope.items[0].$_active).toBeFalsy();
-        expect($scope.items[1].$_active).toBeTruthy();
-        expect($scope.items[2].$_active).toBeFalsy();
+        expect($scope.items[0].$$_active).toBeFalsy();
+        expect($scope.items[1].$$_active).toBeTruthy();
+        expect($scope.items[2].$$_active).toBeFalsy();
 
       });
 
@@ -238,30 +238,30 @@ describe('mindef-navbar-directive', function () {
         locationMock.path('/a');
         $scope.$digest();
 
-        expect($scope.items[0].$_active).toBeFalsy();
-        expect($scope.items[1].$_active).toBeFalsy();
-        expect($scope.items[2].$_active).toBeFalsy();
+        expect($scope.items[0].$$_active).toBeFalsy();
+        expect($scope.items[1].$$_active).toBeFalsy();
+        expect($scope.items[2].$$_active).toBeFalsy();
 
         locationMock.path('/b');
         $scope.$digest();
 
-        expect($scope.items[0].$_active).toBeFalsy();
-        expect($scope.items[1].$_active).toBeTruthy();
-        expect($scope.items[2].$_active).toBeFalsy();
+        expect($scope.items[0].$$_active).toBeFalsy();
+        expect($scope.items[1].$$_active).toBeTruthy();
+        expect($scope.items[2].$$_active).toBeFalsy();
 
         locationMock.path('/some-folder');
         $scope.$digest();
 
-        expect($scope.items[0].$_active).toBeTruthy();
-        expect($scope.items[1].$_active).toBeFalsy();
-        expect($scope.items[2].$_active).toBeFalsy();
+        expect($scope.items[0].$$_active).toBeTruthy();
+        expect($scope.items[1].$$_active).toBeFalsy();
+        expect($scope.items[2].$$_active).toBeFalsy();
 
         locationMock.path('/some-folder/1/2/3');
         $scope.$digest();
 
-        expect($scope.items[0].$_active).toBeTruthy();
-        expect($scope.items[1].$_active).toBeFalsy();
-        expect($scope.items[2].$_active).toBeFalsy();
+        expect($scope.items[0].$$_active).toBeTruthy();
+        expect($scope.items[1].$$_active).toBeFalsy();
+        expect($scope.items[2].$$_active).toBeFalsy();
 
       });
 

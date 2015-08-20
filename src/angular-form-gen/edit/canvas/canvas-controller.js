@@ -32,7 +32,7 @@ fg.controller('fgEditCanvasController', function ($scope, dqUtils, $timeout, fgU
     // Delay is set to prevent browser from copying adjusted html as copy image
 
     $timeout(function () {
-      field.$_isDragging = true;
+      field.$$_isDragging = true;
     }, 1);
 
     return { source: 'canvas', field: field, index: index };
@@ -43,7 +43,7 @@ fg.controller('fgEditCanvasController', function ($scope, dqUtils, $timeout, fgU
     // IE Fix: ensure this is fired after the drag begin
 
     $timeout(function () {
-      field.$_isDragging = false;
+      field.$$_isDragging = false;
 //      $scope.dragging = false;
     }, 10);
 
@@ -71,7 +71,7 @@ fg.controller('fgEditCanvasController', function ($scope, dqUtils, $timeout, fgU
       }
 
       // IE fix: not calling dragEnd sometimes
-      field.$_isDragging = false;
+      field.$$_isDragging = false;
     } else {
       throw Error('Drop without data');
     }

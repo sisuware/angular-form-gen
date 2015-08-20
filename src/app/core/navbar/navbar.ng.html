@@ -12,7 +12,7 @@
       </div>
       <div class="navbar-collapse" ng-class="{ collapse: collapsed }">
         <ul class="nav navbar-nav">
-          <li ng-repeat="item in items" ng-class="{ active: item.$_active }" ng-if="isVisible(item)">
+          <li ng-repeat="item in items" ng-class="{ active: item.$$_active }" ng-if="isVisible(item)">
             <a href="#!{{ item.url }}" ng-click="collapse()">{{ item.name }}</a>
           </li>
         </ul>

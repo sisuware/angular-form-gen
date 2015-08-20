@@ -61,7 +61,7 @@ app.factory('appNavbarLinkFn', function ($location, $timeout) {
         for (var i = 0; i < $scope.items.length; i++) {
 
           var navItem = $scope.items[i];
-          var regexp = navItem.$_regexp;
+          var regexp = navItem.$$_regexp;
 
           if (!regexp) {
             var pattern = navItem.pattern;
@@ -77,10 +77,10 @@ app.factory('appNavbarLinkFn', function ($location, $timeout) {
             }
 
             regexp = new RegExp(pattern, 'i');
-            navItem.$_regexp = regexp;
+            navItem.$$_regexp = regexp;
           }
 
-          navItem.$_active = regexp.test(url);
+          navItem.$$_active = regexp.test(url);
         }
       }
     }

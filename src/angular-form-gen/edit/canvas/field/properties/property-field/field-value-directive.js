@@ -34,7 +34,7 @@ fg.directive('fgPropertyFieldValue', function(fgPropertyFieldValueLinkFn) {
     var frmCtrl = ctrls[0];
     var oldViewValue;
 
-    $scope.$watch('field.$_redraw', function(value) {
+    $scope.$watch('field.$$_redraw', function(value) {
 
       if (value) {
 
@@ -45,7 +45,7 @@ fg.directive('fgPropertyFieldValue', function(fgPropertyFieldValueLinkFn) {
         }
 
         $scope.draw = false;
-        $scope.field.$_redraw = false;
+        $scope.field.$$_redraw = false;
       } else {
         $scope.draw = true;
         $element = $element;
@@ -69,7 +69,7 @@ fg.directive('fgPropertyFieldValue', function(fgPropertyFieldValueLinkFn) {
 
       $scope.$watch($attrs.ngModel, function(value) {
         if(value != oldValue) {
-          $scope.field.$_redraw = true;
+          $scope.field.$$_redraw = true;
           oldValue = value;
         }
       });

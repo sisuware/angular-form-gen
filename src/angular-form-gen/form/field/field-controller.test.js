@@ -114,7 +114,7 @@ describe('fg-field-controller', function() {
       // Act
 
       var field = controller.initField();
-      var result = field.$_id;
+      var result = field.$$_id;
 
       // Assert
 

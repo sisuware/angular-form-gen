@@ -10,8 +10,8 @@ fg.controller('fgPropertyFieldOptionsController', function($scope) {
   $scope.$watchCollection('field.options', function(options) {
     if (options) {
       angular.forEach(options, function(option) {
-        if (!option.$_valueWatchFn) {
-          option.$_valueWatchFn = $scope.$watch(function() {
+        if (!option.$$_valueWatchFn) {
+          option.$$_valueWatchFn = $scope.$watch(function() {
             return option.value;
           }, handleValueChange);
         }
@@ -86,7 +86,7 @@ fg.controller('fgPropertyFieldOptionsController', function($scope) {
           $scope.field.value = $scope.field.options[0].value;
         }
 
-        option.$_valueWatchFn();
+        option.$$_valueWatchFn();
       }
     }
   };
