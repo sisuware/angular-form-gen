@@ -1,11 +1,11 @@
 <div fg-checkboxlist fg-field-input ng-model="form.data[field.schema.name]" name="{{ field.schema.name }}">
-  <div class="checkbox" ng-repeat="option in field.schema.options">
-    <label title="{{ field.schema.tooltip }}">
+  <div class="c-inputs-stacked" ng-repeat="option in field.schema.options">
+    <label title="{{ field.schema.tooltip }}" class="c-input c-checkbox">
       <input type="checkbox"
              tabindex="{{ tabIndex }}"
              value="{{ option.value }}"
              ng-model="form.data[field.schema.name][option.value]">
-      <span>{{option.text || option.value}}</span>
+      <span class="c-indicator">{{option.text || option.value}}</span>
     </label>
   </div>
 </div>

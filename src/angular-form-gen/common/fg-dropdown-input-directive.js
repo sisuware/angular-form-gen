@@ -2,14 +2,14 @@ fg.directive('fgDropdownInput', function ($compile, $document, $timeout, $parse,
 
   function createInput($scope, $element, $attrs) {
 
-    var template = '<div class="fg-dropdown-input input-group">' +
-      '<input type="text" class="form-control"/>' +
-      '<span class="input-group-btn">' +
-      '<button class="btn btn-default" type="button" ng-click="dropdownToggle()">' +
-      '<span class="caret"></span>' +
-      '</button>' +
-      '</span>' +
-      '</div>';
+    var template =  '<div class="fg-dropdown-input input-group">' +
+                    '  <input type="text" class="form-control"/>' +
+                    ' <span class="input-group-btn">' +
+                    '<button class="btn btn-default" type="button" ng-click="dropdownToggle()">' +
+                    '<span class="caret"></span>' +
+                    '</button>' +
+                    '</span>' +
+                    '</div>';
 
     var $template = angular.element(template);
     var $input = $template.find('input');
