@@ -2,14 +2,12 @@ fg.directive('fgDropdownInput', function ($compile, $document, $timeout, $parse,
 
   function createInput($scope, $element, $attrs) {
 
-    var template =  '<div class="fg-dropdown-input input-group">' +
-                    '  <input type="text" class="form-control"/>' +
-                    ' <span class="input-group-btn">' +
-                    '<button class="btn btn-default" type="button" ng-click="dropdownToggle()">' +
-                    '<span class="caret"></span>' +
-                    '</button>' +
-                    '</span>' +
-                    '</div>';
+  var template =  '<div class="fg-dropdown-input input-group">' +
+                  ' <input type="text" class="fg-dropdown-input form-control form-control-sm">' +
+                  ' <span class="input-group-btn">' +
+                  '   <button class="btn btn-secondary dropdown-toggle" type="button" ng-click="dropdownToggle()"></button>' +
+                  ' </span>' +
+                  '</div>';
 
     var $template = angular.element(template);
     var $input = $template.find('input');
@@ -51,13 +49,9 @@ fg.directive('fgDropdownInput', function ($compile, $document, $timeout, $parse,
     var modelGetter = $parse($attrs.ngModel);
     var modelSetter = modelGetter.assign;
 
-    var template = '<div class="fg-dropdown" ng-class="{ \'open\': dropdownVisible }">' +
-      '<ul ng-if="items && items.length" class="dropdown-menu">' +
-      '<li ng-repeat="item in items" ng-class="{ active: item.value === getModelValue() }">' +
-      '<a href="" ng-click="setModelValue(item.value)">{{ item.text || item.value }}</a>' +
-      '</li>' +
-      '</ul>' +
-      '</div>';
+    var template =  '<div class="fg-dropdown dropdown-menu dropdown-menu-right" ng-class="{ \'open\': dropdownVisible }">' +
+                    '  <a ng-repeat="item in items" class="dropdown-item" ng-class="{ active: item.value === getModelValue() }" href="" ng-click="setModelValue(item.value)">{{ item.text || item.value }}</a>' +
+                    '</div>';
 
     var $template = angular.element(template);
 

@@ -1,13 +1,12 @@
-<legend ng-click="paletteCategoriesMenuOpen = !paletteCategoriesMenuOpen"
-        ng-class="{ 'open': paletteCategoriesMenuOpen }">Fields 
+<legend ng-click="paletteCategoriesMenuOpen = !paletteCategoriesMenuOpen" ng-class="{ 'open': paletteCategoriesMenuOpen }">Fields 
     <span class="fg-legend-extra fg-edit-palette-categories visible-xs-inline visible-md-inline visible-lg-inline">- {{ categoryName || 'All field types' }}</span> <i class="caret"></i>
     
-    <div class="dropdown-menu">
-        <a ng-repeat="(name, category) in categories" ng-class="{ 'active': categoryName === name }" ng-click="setCategory(name, category)">
+    <div class="dropdown-menu dropdown-menu-right">
+        <a class="dropdown-item" ng-repeat="(name, category) in categories" ng-class="{ 'active': categoryName === name }" ng-click="setCategory(name, category)">
             {{ name }}
         </a>
-        <div class="divider"></div>
-        <a ng-class="{ 'active': !category }" ng-click="setCategory(null)">
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" ng-class="{ 'active': !category }" ng-click="setCategory(null)">
             All field types
         </a>
     </div>
