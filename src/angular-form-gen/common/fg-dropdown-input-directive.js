@@ -5,7 +5,7 @@ fg.directive('fgDropdownInput', function ($compile, $document, $timeout, $parse,
   var template =  '<div class="fg-dropdown-input input-group">' +
                   ' <input type="text" class="fg-dropdown-input form-control form-control-sm">' +
                   ' <span class="input-group-btn">' +
-                  '   <button class="btn btn-secondary dropdown-toggle" type="button" ng-click="dropdownToggle()"></button>' +
+                  '   <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" ng-click="dropdownToggle()"></button>' +
                   ' </span>' +
                   '</div>';
 
@@ -154,9 +154,9 @@ fg.directive('fgDropdownInput', function ($compile, $document, $timeout, $parse,
         var $dropdown = createDropdown($scope, $element, $attrs, ngModelCtrl, $input);
         var dropdownCompileFn = $compile($dropdown);
 
-        var $body = $document.find('body');
+        var $inputGroup = $input.find('.input-group-btn');
 
-        $body.append($dropdown);
+        $inputGroup.append($dropdown);
 
         dropdownCompileFn($scope);
 

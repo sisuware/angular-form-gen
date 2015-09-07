@@ -4,5 +4,6 @@
          type="checkbox"
          tabindex="{{ tabIndex }}"
          ng-model="form.data[field.schema.name]">
-  <span ng-if="field.schema.nolabel" class="c-indicator">{{ field.schema.displayName }}</span>
+  <span class="c-indicator"></span>
+  <span ng-if="field.schema.nolabel">{{ field.schema.displayName }}</span>
 </label>
