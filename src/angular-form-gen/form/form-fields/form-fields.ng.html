@@ -1,6 +1,6 @@
 <div class="fg-form-fields">
   <fieldset>
-    <div ng-if="field.visible != false" ng-repeat="field in form.schema.fields" ng-class="field.style">
+    <div ng-if="field.visible != false" ng-repeat="field in form.schema.fields" ng-class="field.style || 'col-sm-12'">
       <div fg-field="field"></div>
     </div>
   </fieldset>
