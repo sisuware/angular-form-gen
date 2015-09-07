@@ -12,7 +12,8 @@ fg.directive('fgPropertyFieldCommon', function(fgPropertyFieldCommonLinkFn) {
       displayname: false,
       placeholder: false,
       tooltip: false,
-      focus: false
+      focus: false,
+      style: false
     };
 
     $scope.$watch($attrs['fgPropertyFieldCommon'], function(value) {
